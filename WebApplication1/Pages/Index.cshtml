@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Greeting()</h1>
+    <h2>I'm a developer. Did you need help?</h2>
+    <p>coding is life</p>
+    <button><a href="/Portfolio">My portfolio</a></button>
+</div>

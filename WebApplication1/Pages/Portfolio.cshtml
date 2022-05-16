@@ -1,0 +1,19 @@
+﻿@page
+@model WebApplication1.Pages.Portfolio
+@{
+    ViewData["Title"] = "Portfolio";
+}
+<div>
+    <h1>Hi! My name is @Model.FullName </h1>
+</div>
+<div>
+    <h4>Summary:</h4>
+    <p>I'm an enthusiastic software engineer with @Model.Experients+ years of experience participating in the complete lifecyclye of successfully launched applications. I am skilled in developing business plans, requirements specifications, user documentation, and architectural systems research. Strong written and verbal communications.</p>
+    <h4>Languages:</h4>
+    @foreach(Language lan in Model.languages)
+    {
+        <h3>@lan.Name</h3>
+        <p>Experients: @lan.exper months</p>
+        <p>Certificates: @lan.certificate</p>
+    }
+</div>
