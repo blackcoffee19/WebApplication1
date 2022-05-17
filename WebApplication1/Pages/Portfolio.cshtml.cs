@@ -9,10 +9,10 @@ namespace WebApplication1.Pages
 {
     public class Portfolio : PageModel
     {
-        public string FullName { get; set; }
-        public int Age { get; set; }
-        public int Experients { get; set; }
-        public List<Language> languages { get; set; }
+        public string? FullName { get; set; }
+        public int? Age { get; set; }
+        public int? Experients { get; set; }
+        public List<Language>? languages { get; set; }
         public void OnGet()
         {
             FullName = "Black Coffee";

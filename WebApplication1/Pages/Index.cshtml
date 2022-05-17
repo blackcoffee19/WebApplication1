@@ -2,6 +2,20 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Task[] orderTask = {
+    new Task("Learning C#"),
+    new Task("Learning Java"),
+    new Task("Learing C++"),
+    new Task("Learning JavaScript"),
+    new Task("Learning SQL")
+    };
+    int ran1 = Model.RandomIndex(5);
+    int ran2 = Model.RandomIndex(5);
+    int ran3 = Model.RandomIndex(5);
+    Task[] choose = {
+        orderTask[ran1],orderTask[ran2],orderTask[ran3],
+    };
+
 }
 
 <div class="container">
@@ -9,10 +23,18 @@
         <h1 class="display-4">@Model.Greeting()</h1>
         <h2>I'm a developer. Did you need help?</h2>
         <p>coding is life</p>
-        <button class="button-sp"><a href="/Portfolio">My portfolio</a></button>
+        <a class="button-sp" href="/Portfolio">My portfolio</a>
     </div>
+    <h2 class="content">Task today</h2>
     <div class="container-item2">
-        <!--Add a img by random --> 
-        <img src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.15752-9/279216614_3190299117924305_60266691499422808_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=ae9488&_nc_ohc=-Rnv4pEvtEcAX8ura16&_nc_ht=scontent.fsgn5-8.fna&oh=03_AVIm7XIU57gE5SdMSH-lQjvSQODZcWDll-cEamzPhK6H-A&oe=62A776AF" alt="wolf">
+        
+        @foreach(Task aTask in choose){
+            <div class="task">
+                <h3>@aTask.Title</h3>
+                <p>@aTask.Mission</p>
+            </div>
+        }
+
     </div>
 </div>
+

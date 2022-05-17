@@ -26,36 +26,48 @@ body {
   padding: 20px 0 10px 0;
   max-width: 100%;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 .button-sp {
+  padding: 10px 20px;
   width: 150px;
   height: 50px;
-  background-color: rgb(235, 119, 11);
+  background-color: rgb(243, 120, 4);
   color: #ffffff;
   border-radius: 10px;
   border: 1px solid #ffffff;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  text-decoration: none;
   
 }
-.container-item2 {
+div.container-item2 {
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-.button-sp > a {
-  text-decoration: none;
-  background-color: rgb(235, 119, 11);
+.task{
+  height: 200px;
+  margin: 20px;
+  text-align: center;
 }
-a:link, a:visited {
-  text-decoration: none;
-  color: #ffffff;
+.task > p{
+  text-align: start;
+  margin-top: 50px;
 }
 .button-sp:hover, .button-sp:active {
   background-color: rgb(218, 136, 59);
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
   border: 1px solid #ffffff;
-
+  text-decoration: none;
+  color: #ffffff;
+}
+.button-sp > a:hover {
+  background-color: rgb(218, 136, 59);
+}
+.content {
+  margin: 50px 0 20px 0;
+  color: #000000;
 }
 
