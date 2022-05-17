@@ -4,9 +4,15 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">@Model.Greeting()</h1>
-    <h2>I'm a developer. Did you need help?</h2>
-    <p>coding is life</p>
-    <button><a href="/Portfolio">My portfolio</a></button>
+<div class="container">
+    <div class="container-item1">
+        <h1 class="display-4">@Model.Greeting()</h1>
+        <h2>I'm a developer. Did you need help?</h2>
+        <p>coding is life</p>
+        <button class="button-sp"><a href="/Portfolio">My portfolio</a></button>
+    </div>
+    <div class="container-item2">
+        <!--Add a img by random --> 
+        <img src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.15752-9/279216614_3190299117924305_60266691499422808_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=ae9488&_nc_ohc=-Rnv4pEvtEcAX8ura16&_nc_ht=scontent.fsgn5-8.fna&oh=03_AVIm7XIU57gE5SdMSH-lQjvSQODZcWDll-cEamzPhK6H-A&oe=62A776AF" alt="wolf">
+    </div>
 </div>
