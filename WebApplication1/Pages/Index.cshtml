@@ -2,22 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    Task[] orderTask = {
-    new Task("Learning C#"),
-    new Task("Learning Java"),
-    new Task("Learing C++"),
-    new Task("Learning JavaScript"),
-    new Task("Learning SQL")
-    };
-    int ran1 = Model.RandomIndex(5);
-    int ran2 = Model.RandomIndex(5);
-    int ran3 = Model.RandomIndex(5);
-    Task[] choose = {
-        orderTask[ran1],orderTask[ran2],orderTask[ran3],
-    };
-
 }
-
 <div class="container">
     <div class="container-item1">
         <h1 class="display-4">@Model.Greeting()</h1>
@@ -28,7 +13,7 @@
     <h2 class="content">Task today</h2>
     <div class="container-item2">
         
-        @foreach(Task aTask in choose){
+        @foreach(ListTask aTask in Model.choose){
             <div class="task">
                 <h3>@aTask.Title</h3>
                 <p>@aTask.Mission</p>

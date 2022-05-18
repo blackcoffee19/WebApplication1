@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+using WebApplication1.Models;
 namespace WebApplication1.Pages
 {
     public class IndexModel : PageModel
@@ -29,29 +29,24 @@ namespace WebApplication1.Pages
             int num = ran.Next(0, maxi);
             return num;
         }
+
+        public List<ListTask> orderTask = new List<ListTask>{
+            new ListTask("Learning C#"),
+            new ListTask("Learning Java"),
+            new ListTask("Learing C++"),
+            new ListTask("Learning JavaScript"),
+            new ListTask("Learning SQL")
+        };
+        public List<ListTask>? choose {get;set;}
+        public ListTask? Display {get;set;}
         public void OnGet()
-        {   
+        {
+            choose = new List<ListTask>();
+            while(choose.Count <=3){
+                int ran = RandomIndex(orderTask.Count);
+                choose.Add(orderTask[ran]);
+            };
         }
-    }
-    public class Task
-    {
-        public string Title{get;set;}
-        public string Mission {get;set;}
-        public Task(string title){
-            this.Title = title;
-            if(title.Contains("C#")){
-                this.Mission = $"To {this.Title} you need to go Codecademy and try to learn at least 2 lessons, or make some projects.";
-            } else if(title.Contains("Java")){
-                this.Mission = $"To {this.Title} you should go to GoogleDrive and practise more exercises.";
-            } else if(title.Contains("C++")){
-                this.Mission = $"To {this.Title} you can go to Codecademy to review all lessons and you should go to GoogleDrive and practise more exercises.";
-            } else if(title.Contains("SQL")){
-                this.Mission = $"To {this.Title} you can go to Codecademy to review all lessons then you should create more tables or trying add more columns and rows.";
-            } else if(title.Contains("JavaScript")){
-                this.Mission = $"To {this.Title} you can go to Codecademy to review all lessons then you should practise more exercise related to JS.";
-            } else {
-                this.Mission = $"To {this.Title} you can learn at least 2 lessons in Codecademy.";
-            }
-        }        
+
     }
 }

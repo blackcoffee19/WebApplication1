@@ -1,0 +1,19 @@
+@page
+@model ArchiveMode 
+@{
+
+}
+<div>
+    <h2>Mission Completed:</h2>
+    <hr>
+    @for(int i = 0; i < Model.orderTask.Count; i++){
+        <div>
+            <h3><a asp-page="/Archive" asp-route-index=@i>@Model.orderTask[i]</a></h3>
+            <p>@Model.orderTask[i].Mission</p>
+        </div>
+    }
+</div>
+<div>
+    <h3 class="archive-post-title">@Model.Displayed.Title</h3>
+    <p>@Model.Displayed.Mission</p>
+</div>

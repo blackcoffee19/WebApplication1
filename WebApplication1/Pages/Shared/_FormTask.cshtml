@@ -1,0 +1,26 @@
+@model WebApplication1.Pages.FormSide
+<form>
+    <h2>Mission</h2>
+    <div>
+        <label for="InputTitle">Title</label>
+        <input type="text" class="form-control" asp-for="InputTitle" aria-describedby="titleHelp" placeholder="Enter text">
+        <small id="titleHelp" class="form-text text-muted">What did you do?</small>
+    </div>
+    <div>
+        <label for="Choose">Did it has cost?</label>
+        <input type="radio" class="form-control" asp-for="Choose" value="Yes">
+        <label for="Choose">Yes</label>
+        <input type="radio" class="form-control" asp-for="Choose" value="No">
+        <label for="Choose">No</label>
+    </div>
+    <div>
+        <label for="InputMoney">Payment</label>
+        <input type="number" class="form-contol" asp-for="InputMoney" aria-describedby="moneyHelp" placeholder="x 1000 đồng">
+        <small id="moneyHelp" class="form-text text-muted">What cost is it?</small>
+    </div>
+    <div>
+        <label for="InputReason">Reason</label>
+        <input type="text" class="form-control" asp-for="InputReason" placeholder="Why?" required>
+    </div>
+    <button type="submit" class="button">Submit</button>
+</form>
