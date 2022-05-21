@@ -1,12 +1,12 @@
 *{
   margin: 0;
   padding: 0;
-  width: 100%;
-  background-color: #0077cc;
 }
 html {
+  background-color: #0077cc;
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif;}
+  font-family: 'Montserrat', sans-serif;
+}
 
 @media (min-width: 768px) {
   html {
@@ -27,8 +27,11 @@ body {
   max-width: 100%;
   color: #ffffff;
   display: block;
+  height: auto;
 }
 .button-sp {
+  font-size: 18px;
+  font-weight: 700;
   padding: 10px 20px;
   width: 150px;
   height: 50px;
@@ -40,23 +43,28 @@ body {
   text-decoration: none;
   
 }
-div.container-item2 {
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+div.container-item1{
+  height: fit-content;
+  padding: 50px 0 20px 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
 }
 .task{
-  height: 200px;
-  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  height: max-content;
+  margin: 10px;
   text-align: center;
 }
-.task > p{
-  text-align: start;
-  margin-top: 50px;
+.card{
+  border: none;
+}
+.card-body{
+  height: 300px;
 }
 .button-sp:hover, .button-sp:active {
+  font-size: 18px;
+  font-weight: 700;
   background-color: rgb(218, 136, 59);
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
   border: 1px solid #ffffff;
@@ -76,4 +84,20 @@ div.container-item2 {
   border: 3px solid rgb(243, 120, 4);
   border-radius: 10px;
 }
-
+#current-page{
+  background-color: #2e8acc;  
+}
+/*form custom*/
+#form-cus{
+  background-color: #ffffff;
+  color: #000;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 5px rgba(255, 255, 255, 0.2),  0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+.carouImg {
+  height:70px;
+  width:100px;
+  object-fit: cover;
+}

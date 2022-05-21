@@ -3,23 +3,30 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<div class="container">
+<div class="row">
     <div class="container-item1">
         <h1 class="display-4">@Model.Greeting()</h1>
         <h2>I'm a developer. Did you need help?</h2>
         <p>coding is life</p>
         <a class="button-sp" href="/Portfolio">My portfolio</a>
     </div>
-    <h2 class="content">Task today</h2>
-    <div class="container-item2">
+</div>
+<div class="row">
+    <div class="col">
+        <h2 class="alert alert-primary">Task today</h2>
+    </div>
+    <div class="row">
         
         @foreach(ListTask aTask in Model.choose){
-            <div class="task">
-                <h3>@aTask.Title</h3>
-                <p>@aTask.Mission</p>
+            <div class="task col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">@aTask.Title</h3>
+                        <p class="card-text">@aTask.Mission</p>
+                    </div>
+                </div>
             </div>
         }
-
     </div>
 </div>
 

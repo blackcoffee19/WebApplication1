@@ -29,8 +29,8 @@ namespace WebApplication1.Pages
             int num = ran.Next(0, maxi);
             return num;
         }
-
-        public List<ListTask> orderTask = new List<ListTask>{
+        public List<ListTask> orderTask = new List<ListTask>
+        {
             new ListTask("Learning C#"),
             new ListTask("Learning Java"),
             new ListTask("Learing C++"),
@@ -42,11 +42,10 @@ namespace WebApplication1.Pages
         public void OnGet()
         {
             choose = new List<ListTask>();
-            while(choose.Count <=3){
+            while(choose.Count <= 3){
                 int ran = RandomIndex(orderTask.Count);
                 choose.Add(orderTask[ran]);
             };
         }
-
     }
 }
