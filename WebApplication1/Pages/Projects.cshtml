@@ -1,0 +1,29 @@
+@page "/Project/{nameProject?}"
+@model ProjectsModel
+
+<div class="text-center">
+    <h1>My Project</h1>
+    <p>All my project also like a website template</p> 
+</div>
+<div class="accordion" id="accordion">
+    foreach(var pro in Model.GetProject)
+    {
+        <div class="card">
+            <div class="card-header pl-1">
+                <h2 class="mb-0">
+                    <button class="btn-link font-weight-bold collapsed" type="button" data-toggle="collapse" aria-expanded="true">@pro.nameProject
+                        <img class="plus-icon icon-visible" src="https://content.codecademy.com/courses/asp-dot-net/animal-icons/plus-blue-32-32.png" />
+                        <img class="minus-icon icon-hidden" src="https://content.codecademy.com/courses/asp-dot-net/animal-icons/minus-blue-32-32.png" />
+                    </button>
+                </h2>
+            </div>   
+            <div class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    <h5 class="card-title">@pro.Description</h5>
+                    <p class="card-text">@pro.Description</p>
+                    <a asp-page=@pro.linkPage class="btn text-white">More Info</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
