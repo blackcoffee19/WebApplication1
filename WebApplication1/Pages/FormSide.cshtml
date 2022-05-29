@@ -3,10 +3,30 @@
 @{
     
 }
-<div>
-    <h1>Task Form</h1>
-    <h3>How your day?</h3>
+<div class="jumbotron jumbotron-fluid" id="chef-jumbotron">
+  <div id="request-info">
+    <em>RequestMethod</em>: @Model.RequestMethod  <em>RequestInfo</em>: @Model.RequestValues
+  </div>
+  <div id="jumbotron-main-text">
+    <h1>Form Side</h1>
+    <p>A place post </p>
+  </div>
 </div>
-<div>
-    <partial name="_FormTask"/>
+
+<div class="row">
+    <div class="col">
+        <partial name="_FormTask"/>
+    </div>
+    <div class="col">
+        <h3>Your task</h3>
+        <hr>
+        @foreach(var item in Model.listItem){
+        <div class="blog-post">
+            <h2 class="blog-post-title">@item.Name</h2>
+            <p class="blog-post-meta">Cost: @item.Cost</p>
+            <p class="blog-post-meta">Calories: @item.Calories</p>
+            <p class="blog-post-meta">More detail: @item.Detail</p>
+        </div>
+        }
+    </div>
 </div>

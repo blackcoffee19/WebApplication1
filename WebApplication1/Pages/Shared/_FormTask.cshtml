@@ -1,28 +1,23 @@
 @model WebApplication1.Pages.FormSide
-<form id="form-cus">
+<form id="form-cus" method="post">
     <h2>Mission</h2>
-    <div class="mb-3">
-        <label for="InputTitle" class="form-label">Title</label>
-        <input type="text" class="form-control" asp-for="InputTitle" aria-describedby="titleHelp" placeholder="Enter text">
+    <div class="form-group">
+        <label for="InputName" class="form-label">Title</label>
+        <input type="text" class="form-control" asp-for="InputName" aria-describedby="titleHelp" placeholder="Enter text">
         <small id="titleHelp" class="form-text text-muted">What did you do?</small>
     </div>
-    <label for="Choose" class="form-label">Did it has cost?</label>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" asp-for="Choose" value="Yes">
-        <label for="Choose" class="form-label">Yes</label>
-    </div>
-    <div class="form-check">    
-        <input type="radio" class="form-check-input" asp-for="Choose" value="No">
-        <label for="Choose" class="form-label">No</label>
-    </div>
-    <div>
+    <div class="form-group">
         <label for="InputMoney" class="form-label">Payment</label>
-        <input type="number" class="form-contol" asp-for="InputMoney" aria-describedby="moneyHelp" placeholder="x 1000 đồng">
+        <input type="text" class="form-contol" asp-for="InputMoney" aria-describedby="moneyHelp" placeholder="x 1000 đồng">
         <small id="moneyHelp" class="form-text text-muted">What cost is it?</small>
     </div>
-    <div>
-        <label for="InputReason" class="form-label">Reason</label>
-        <input type="text" class="form-control" asp-for="InputReason" placeholder="Why?" required>
+    <div class="form-group">
+        <label for="Calo" class="form-label">Calo</label>
+        <input type="number" class="form-control" asp-for="Calo" placeholder="How much calories is it?" required>
     </div>
-    <button type="submit" class="btn btn-info">Submit</button>
+    <div class="form-group">
+        <label for="Details" class="form-label">Details</label>
+        <input type="text" class="form-control" asp-for="Details" placeholder="More details" required>
+    </div>
+    <button type="submit" class="btn btn-info" id="submit" style="top:10px;">Submit</button>
 </form>
